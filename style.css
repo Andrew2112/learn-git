@@ -11,3 +11,129 @@
     display: block;
     width: 300px;
 }
+
+:root {
+    --link-color: #d81b60;
+}
+
+a {
+    color: var(--link-color);
+}
+
+a:hover {
+    color: #fff;
+}
+
+
+/* LINK 1 */
+
+.link-1 {
+    box-shadow: inset 0 0 var(--link-color);
+    transition: box-shadow .3s, color .3s;
+    padding: 3px;
+}
+
+.link-1:hover {
+    box-shadow: inset 100px 0 0 var(--link-color);
+    text-decoration: none
+}
+
+
+/* LINK 2 */
+
+.link-2 {
+    position: relative;
+}
+
+.link-2::before {
+    background: var(--link-color);
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(0);
+    transition: transform .3s;
+    z-index: -1;
+    padding: 3px;
+}
+
+.link-2:hover::before {
+    transform: scaleX(1);
+}
+
+
+/* LINK 3 */
+
+.link-3 {
+    position: relative;
+}
+
+.link-3::before {
+    background: var(--link-color);
+    content: '';
+    inset: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .3s, color .3s;
+    z-index: -1;
+    padding: 3px;
+}
+
+.link-3:hover::before {
+    transform: scaleX(1);
+}
+
+
+/* LINK 4 */
+
+.link-4 {
+    position: relative;
+}
+
+.link-4::before {
+    background: var(--link-color);
+    content: '';
+    inset: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    /* transform-origin: bottom; */
+    transition: transform .3s, color .3s;
+    z-index: -1;
+    padding: 3px;
+}
+
+.link-4:hover::before {
+    transform: scaleY(1);
+}
+
+
+/* LINK 5 */
+
+.link-5 {
+    position: relative;
+}
+
+.link-5::before {
+    background: var(--link-color);
+    content: '';
+    inset: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .3s, color .3s;
+    z-index: -1;
+    padding: 3px;
+}
+
+.link-5:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
